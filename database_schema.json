@@ -1,0 +1,81 @@
+{
+  "database": {
+    "users": {
+      "students": {
+        "$studentId": {
+          "userId": "string",
+          "name": "string",
+          "email": "string",
+          "phoneNumber": "string",
+          "profileImageUrl": "string",
+          "isVerified": "boolean",
+          "isEmailVerified": "boolean",
+          "universityId": "string"
+        }
+      },
+      "drivers": {
+        "$driverId": {
+          "userId": "string",
+          "name": "string",
+          "email": "string",
+          "phoneNumber": "string",
+          "profileImageUrl": "string",
+          "isVerified": "boolean",
+          "vehicleId": "string",
+          "bankAccountNumber": "string",
+          "bankName": "string",
+          "isAvailable": "boolean",
+          "latitude": "double",
+          "longitude": "double",
+          "isApproved": "boolean"
+        }
+      },
+      "admins": {
+        "$adminId": {
+          "userId": "string",
+          "name": "string",
+          "email": "string",
+          "role": "string"
+        }
+      }
+    },
+    "rides": {
+      "$rideId": {
+        "studentId": "string",
+        "driverId": "string",
+        "pickupLatitude": "double",
+        "pickupLongitude": "double",
+        "destinationLatitude": "double",
+        "destinationLongitude": "double",
+        "pickupLocationName": "string",
+        "destinationLocationName": "string",
+        "requestTime": "timestamp",
+        "acceptTime": "timestamp",
+        "completionTime": "timestamp",
+        "status": "string"
+      }
+    },
+    "driver_locations": {
+      "$driverId": {
+        "latitude": "double",
+        "longitude": "double",
+        "lastUpdated": "timestamp",
+        "isAvailable": "boolean"
+      }
+    },
+    "driver_approval_requests": {
+      "$requestId": {
+        "driverId": "string",
+        "name": "string",
+        "phoneNumber": "string",
+        "vehicleId": "string",
+        "bankAccountNumber": "string",
+        "bankName": "string",
+        "requestTime": "timestamp",
+        "status": "string",
+        "reviewedBy": "string",
+        "reviewTime": "timestamp"
+      }
+    }
+  }
+}
